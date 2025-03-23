@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'appStart.apps.AppstartConfig',
 ]
 
 MIDDLEWARE = [
@@ -76,19 +77,19 @@ WSGI_APPLICATION = 'home.wsgi.application'
 
 DATABASES = {
     #postgres database
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': get_env_value("DB_NAME"),
-        'USER': get_env_value("DB_USER"),
-        'PASSWORD': get_env_value("DB_PASSWORD"),
-        'HOST': get_env_value("DB_HOST"),
-        'PORT': get_env_value("DB_PORT"),
-    },
-    #sqlite database
     # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': BASE_DIR / 'db.sqlite3',
-    # }
+    #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    #     'NAME': get_env_value("DB_NAME"),
+    #     'USER': get_env_value("DB_USER"),
+    #     'PASSWORD': get_env_value("DB_PASSWORD"),
+    #     'HOST': get_env_value("DB_HOST"),
+    #     'PORT': get_env_value("DB_PORT"),
+    # },
+    #sqlite database
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
 
 
