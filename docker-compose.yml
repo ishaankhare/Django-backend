@@ -18,7 +18,7 @@ services:
 
   app:
     network_mode: host
-    container_name: data-governance
+    container_name: backend_app
     build:
       context: .
       dockerfile: Dockerfile.app
@@ -41,8 +41,8 @@ services:
         condition: service_healthy
     # make sure your app migration files are synced to host
     # this is required incase you ran makemigrations from within container shell
-    volumes:
-    - ./entity/migrations:/src/entity/migrations
+    # volumes:
+    # - ./entity/migrations:/src/entity/migrations
 
 volumes:
   pgdata:

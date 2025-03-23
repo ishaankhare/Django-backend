@@ -27,5 +27,5 @@ CMD ["sh", "-c",\
     python manage.py migrate --noinput && \
     python manage.py ensure_adminuser && \
     python manage.py ensure_self_host_site && \
-    gunicorn governance.wsgi:application -b 0.0.0.0:8000 -k gevent"\
+    gunicorn home.wsgi:application -b 0.0.0.0:8000 -k gevent"\
 ]
